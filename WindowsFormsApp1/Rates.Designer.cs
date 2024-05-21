@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rates));
             System.Windows.Forms.Label rate_NameLabel;
             System.Windows.Forms.Label rate_Coast_Per_MonthLabel;
             System.Windows.Forms.Label numbers_of_FilmsLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rates));
             this.медиатекаDataSet = new WindowsFormsApp1.МедиатекаDataSet();
             this.ratesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ratesTableAdapter = new WindowsFormsApp1.МедиатекаDataSetTableAdapters.RatesTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.МедиатекаDataSetTableAdapters.TableAdapterManager();
             this.ratesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ratesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.rate_NameTextBox = new System.Windows.Forms.TextBox();
             this.rate_Coast_Per_MonthTextBox = new System.Windows.Forms.TextBox();
@@ -62,6 +62,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.ratesBindingNavigator)).BeginInit();
             this.ratesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // rate_NameLabel
+            // 
+            rate_NameLabel.AutoSize = true;
+            rate_NameLabel.Location = new System.Drawing.Point(53, 132);
+            rate_NameLabel.Name = "rate_NameLabel";
+            rate_NameLabel.Size = new System.Drawing.Size(64, 13);
+            rate_NameLabel.TabIndex = 1;
+            rate_NameLabel.Text = "Rate Name:";
+            // 
+            // rate_Coast_Per_MonthLabel
+            // 
+            rate_Coast_Per_MonthLabel.AutoSize = true;
+            rate_Coast_Per_MonthLabel.Location = new System.Drawing.Point(53, 182);
+            rate_Coast_Per_MonthLabel.Name = "rate_Coast_Per_MonthLabel";
+            rate_Coast_Per_MonthLabel.Size = new System.Drawing.Size(115, 13);
+            rate_Coast_Per_MonthLabel.TabIndex = 3;
+            rate_Coast_Per_MonthLabel.Text = "Rate Coast Per Month:";
+            // 
+            // numbers_of_FilmsLabel
+            // 
+            numbers_of_FilmsLabel.AutoSize = true;
+            numbers_of_FilmsLabel.Location = new System.Drawing.Point(53, 230);
+            numbers_of_FilmsLabel.Name = "numbers_of_FilmsLabel";
+            numbers_of_FilmsLabel.Size = new System.Drawing.Size(90, 13);
+            numbers_of_FilmsLabel.TabIndex = 5;
+            numbers_of_FilmsLabel.Text = "Numbers of Films:";
             // 
             // медиатекаDataSet
             // 
@@ -113,9 +140,34 @@
             this.ratesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ratesBindingNavigator.Name = "ratesBindingNavigator";
             this.ratesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ratesBindingNavigator.Size = new System.Drawing.Size(406, 25);
+            this.ratesBindingNavigator.Size = new System.Drawing.Size(352, 25);
             this.ratesBindingNavigator.TabIndex = 0;
             this.ratesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -144,22 +196,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -167,7 +213,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -176,66 +222,30 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // ratesBindingNavigatorSaveItem
             // 
             this.ratesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ratesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ratesBindingNavigatorSaveItem.Image")));
             this.ratesBindingNavigatorSaveItem.Name = "ratesBindingNavigatorSaveItem";
-            this.ratesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.ratesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.ratesBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.ratesBindingNavigatorSaveItem.Click += new System.EventHandler(this.ratesBindingNavigatorSaveItem_Click);
-            // 
-            // rate_NameLabel
-            // 
-            rate_NameLabel.AutoSize = true;
-            rate_NameLabel.Location = new System.Drawing.Point(53, 132);
-            rate_NameLabel.Name = "rate_NameLabel";
-            rate_NameLabel.Size = new System.Drawing.Size(64, 13);
-            rate_NameLabel.TabIndex = 1;
-            rate_NameLabel.Text = "Rate Name:";
             // 
             // rate_NameTextBox
             // 
             this.rate_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ratesBindingSource, "Rate_Name", true));
-            this.rate_NameTextBox.Location = new System.Drawing.Point(123, 129);
+            this.rate_NameTextBox.Location = new System.Drawing.Point(174, 125);
             this.rate_NameTextBox.Name = "rate_NameTextBox";
             this.rate_NameTextBox.Size = new System.Drawing.Size(100, 20);
             this.rate_NameTextBox.TabIndex = 2;
-            // 
-            // rate_Coast_Per_MonthLabel
-            // 
-            rate_Coast_Per_MonthLabel.AutoSize = true;
-            rate_Coast_Per_MonthLabel.Location = new System.Drawing.Point(53, 182);
-            rate_Coast_Per_MonthLabel.Name = "rate_Coast_Per_MonthLabel";
-            rate_Coast_Per_MonthLabel.Size = new System.Drawing.Size(115, 13);
-            rate_Coast_Per_MonthLabel.TabIndex = 3;
-            rate_Coast_Per_MonthLabel.Text = "Rate Coast Per Month:";
             // 
             // rate_Coast_Per_MonthTextBox
             // 
@@ -245,19 +255,10 @@
             this.rate_Coast_Per_MonthTextBox.Size = new System.Drawing.Size(100, 20);
             this.rate_Coast_Per_MonthTextBox.TabIndex = 4;
             // 
-            // numbers_of_FilmsLabel
-            // 
-            numbers_of_FilmsLabel.AutoSize = true;
-            numbers_of_FilmsLabel.Location = new System.Drawing.Point(53, 230);
-            numbers_of_FilmsLabel.Name = "numbers_of_FilmsLabel";
-            numbers_of_FilmsLabel.Size = new System.Drawing.Size(90, 13);
-            numbers_of_FilmsLabel.TabIndex = 5;
-            numbers_of_FilmsLabel.Text = "Numbers of Films:";
-            // 
             // numbers_of_FilmsTextBox
             // 
             this.numbers_of_FilmsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ratesBindingSource, "Numbers_of_Films", true));
-            this.numbers_of_FilmsTextBox.Location = new System.Drawing.Point(149, 227);
+            this.numbers_of_FilmsTextBox.Location = new System.Drawing.Point(174, 227);
             this.numbers_of_FilmsTextBox.Name = "numbers_of_FilmsTextBox";
             this.numbers_of_FilmsTextBox.Size = new System.Drawing.Size(100, 20);
             this.numbers_of_FilmsTextBox.TabIndex = 6;
@@ -275,7 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 450);
+            this.ClientSize = new System.Drawing.Size(352, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(numbers_of_FilmsLabel);
             this.Controls.Add(this.numbers_of_FilmsTextBox);

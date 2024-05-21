@@ -42,5 +42,45 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void directorTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            filmsBindingSource.MoveFirst();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            filmsBindingSource.MovePrevious();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            filmsBindingSource.AddNew();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            filmsBindingSource.MoveLast();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            filmsBindingSource.MoveNext();
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            filmsBindingSource.RemoveCurrent();
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.filmsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.медиатекаDataSet);
+        }
+
     }
 }

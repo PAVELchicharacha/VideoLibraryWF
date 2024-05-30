@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label id_FilmLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label genreLabel;
             System.Windows.Forms.Label year_of_IssueLabel;
@@ -56,7 +55,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.filmsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.id_FilmTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.genreTextBox = new System.Windows.Forms.TextBox();
             this.year_of_IssueDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -73,7 +71,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            id_FilmLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             genreLabel = new System.Windows.Forms.Label();
             year_of_IssueLabel = new System.Windows.Forms.Label();
@@ -87,15 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingNavigator)).BeginInit();
             this.filmsBindingNavigator.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // id_FilmLabel
-            // 
-            id_FilmLabel.AutoSize = true;
-            id_FilmLabel.Location = new System.Drawing.Point(53, 120);
-            id_FilmLabel.Name = "id_FilmLabel";
-            id_FilmLabel.Size = new System.Drawing.Size(40, 13);
-            id_FilmLabel.TabIndex = 2;
-            id_FilmLabel.Text = "Id Film:";
             // 
             // nameLabel
             // 
@@ -127,7 +115,7 @@
             // directorLabel
             // 
             directorLabel.AutoSize = true;
-            directorLabel.Location = new System.Drawing.Point(53, 86);
+            directorLabel.Location = new System.Drawing.Point(53, 121);
             directorLabel.Name = "directorLabel";
             directorLabel.Size = new System.Drawing.Size(47, 13);
             directorLabel.TabIndex = 10;
@@ -318,14 +306,6 @@
             this.filmsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.filmsBindingNavigatorSaveItem.Click += new System.EventHandler(this.filmsBindingNavigatorSaveItem_Click);
             // 
-            // id_FilmTextBox
-            // 
-            this.id_FilmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmsBindingSource, "Id_Film", true));
-            this.id_FilmTextBox.Location = new System.Drawing.Point(131, 117);
-            this.id_FilmTextBox.Name = "id_FilmTextBox";
-            this.id_FilmTextBox.Size = new System.Drawing.Size(200, 20);
-            this.id_FilmTextBox.TabIndex = 3;
-            // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmsBindingSource, "Name", true));
@@ -353,7 +333,7 @@
             // directorTextBox
             // 
             this.directorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmsBindingSource, "Director", true));
-            this.directorTextBox.Location = new System.Drawing.Point(131, 83);
+            this.directorTextBox.Location = new System.Drawing.Point(131, 114);
             this.directorTextBox.Name = "directorTextBox";
             this.directorTextBox.Size = new System.Drawing.Size(200, 20);
             this.directorTextBox.TabIndex = 11;
@@ -500,8 +480,6 @@
             this.Controls.Add(this.genreTextBox);
             this.Controls.Add(nameLabel);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(id_FilmLabel);
-            this.Controls.Add(this.id_FilmTextBox);
             this.Controls.Add(this.filmsBindingNavigator);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -534,7 +512,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton filmsBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox id_FilmTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox genreTextBox;
         private System.Windows.Forms.DateTimePicker year_of_IssueDateTimePicker;

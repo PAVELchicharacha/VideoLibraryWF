@@ -77,9 +77,17 @@ namespace WindowsFormsApp1
         }
         private void button8_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             this.Validate();
             this.filmsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.медиатекаDataSet);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }

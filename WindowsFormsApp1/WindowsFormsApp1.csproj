@@ -78,6 +78,12 @@
     <Compile Include="Rates.Designer.cs">
       <DependentUpon>Rates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tablet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablet.Designer.cs">
+      <DependentUpon>Tablet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rates.resx">
       <DependentUpon>Rates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablet.resx">
+      <DependentUpon>Tablet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

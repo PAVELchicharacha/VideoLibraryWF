@@ -90,5 +90,10 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Tablet tablet = new Tablet();
+            tablet.ShowDialog();
+        }
     }
 }

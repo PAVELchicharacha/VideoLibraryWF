@@ -71,6 +71,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             nameLabel = new System.Windows.Forms.Label();
             genreLabel = new System.Windows.Forms.Label();
             year_of_IssueLabel = new System.Windows.Forms.Label();
@@ -374,7 +375,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 41);
+            this.label1.Location = new System.Drawing.Point(128, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 20;
@@ -451,11 +452,22 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(50, 499);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(82, 23);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "Таблица";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 553);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -528,5 +540,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
     }
 }
